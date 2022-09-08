@@ -34,3 +34,15 @@ const numberContainer = document.getElementById('Numero-container');
 const numbersToGuess = getUniqueRandomNumbers(NUMBER_TO_GUESS, 1, 100);
 
 numberContainer.innerHTML = numbersToGuess.join(' - ');
+
+
+// timer di 30 secondi
+setTimeout(function(){
+    console.log('timeout');
+    // nascondo 
+    numberContainer.innerHTML = '';
+
+    setTimeout(askAndCheckUserNumbers, 100);
+
+
+}, TIMEOUT_SECONDS * 1000);
