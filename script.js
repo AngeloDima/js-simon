@@ -73,3 +73,17 @@ function askAndCheckUserNumbers(){
     console.log('Hai indovinato', guessedNumbers, 'numeri');
 
 }
+
+
+function getGuessedNumbersByUser(){
+    const guessedNumbers = [];
+
+    while(guessedNumbers.length < NUMBER_TO_GUESS){
+        const number = parseInt( prompt('Numero?') );
+        if (!isNaN(number) && !guessedNumbers.includes(number)){
+            guessedNumbers.push(number);
+        }
+    }
+
+    return guessedNumbers
+}
