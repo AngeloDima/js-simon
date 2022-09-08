@@ -46,3 +46,30 @@ setTimeout(function(){
 
 
 }, TIMEOUT_SECONDS * 1000);
+
+
+
+
+
+
+
+function askAndCheckUserNumbers(){
+    // utente inserisce i 5 numeri
+    const guessedNumbersByUser = getGuessedNumbersByUser();
+    console.log(guessedNumbersByUser);
+    let guessedNumbers = 0;
+    // controllo numeri inseriti
+    for(let i = 0; i < guessedNumbersByUser.length; i++  ){
+        const userNumber = guessedNumbersByUser[i];
+        if(numbersToGuess.includes(userNumber)){
+             // display quali numeri sono stati individuati
+            console.log('Hai indovinato il numero', userNumber);
+            guessedNumbers++;
+        }
+
+    }  
+
+    // display quanti numeri sono stati individuti
+    console.log('Hai indovinato', guessedNumbers, 'numeri');
+
+}
